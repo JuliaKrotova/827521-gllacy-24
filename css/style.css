@@ -16,7 +16,14 @@ body {
   transition: background-image 0.5s ease, background-color 0.5s ease;
   width: 1146px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 27px;
+}
+
+.site-wrapper-catalog{
+  background-color: #849d8f;
+  width: 1146px;
+  margin: 0 auto;
+  padding: 0 27px;
 }
 
 .site-wrapper::before,
@@ -222,6 +229,11 @@ img {
 .site-navigation-current {
   color: #ffffff;
   background-color: #f7f6f3;
+}
+
+.site-navigation-item-current .current-link{
+  background-color: #d07058;
+  border-radius: 20px;
 }
 
 .site-navigation-item>a:hover {
@@ -432,6 +444,7 @@ img {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 40px;
 }
 
@@ -446,7 +459,7 @@ img {
   margin-right: 26px;
 }
 
-.catalog-item:last-child {
+.catalog-item:last-child{
   margin-right: 0;
 }
 
@@ -510,6 +523,7 @@ img {
   background-color: rgba(248, 247, 244, 0.2);
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
+  z-index: 2;
 }
 
 .catalog-item:hover .item-hover {
@@ -662,7 +676,8 @@ img {
   box-sizing: border-box;
   width: 367px;
   margin-left: 20px;
-  margin-right: 10px padding-left: 15px;
+  margin-right: 10px;
+  padding-left: 15px;
   padding-top: 10px;
   padding-bottom: 10px;
   border: 1px solid rgba(178, 178, 178, 0.5);
@@ -712,6 +727,45 @@ img {
 
 .map {
   position: relative;
+}
+
+.breadcrumbs {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 6px;
+  list-style: none;
+}
+
+.breadcrumbs li {
+  position: relative;
+  margin-right: 22px;
+}
+
+.breadcrumbs li:last-child {
+  margin-right: 0;
+}
+
+.breadcrumbs a {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+color: #ffbc9e;
+text-decoration-color: #ffbc9e;
+}
+
+.page-title{
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  margin-top: 0;
 }
 
 .main-footer {
@@ -778,6 +832,7 @@ img {
 .footer-links a:hover,
 .footer-links a:focus {
   color: #ffbc9e;
+  text-decoration-color: #ffbc9e;
 }
 
 .footer-links .heart {
@@ -821,4 +876,5 @@ img {
 .footer-copyright .copyright-link:hover,
 .footer-copyright .copyright-link:focus {
   color: #ffbc9e;
+  text-decoration-color: #ffbc9e;
 }
