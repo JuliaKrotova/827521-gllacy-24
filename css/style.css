@@ -4,7 +4,7 @@ body {
   font-family: Roboto, "Arial", sans-serif;
   color: #ffffff;
   width: 100%;
-  background-color: #000000;
+  background-color: #849d8f;
   margin: 0;
 }
 
@@ -812,6 +812,7 @@ img {
 }
 
 .filter-sorting {
+  position: relative;
   width: 195px;
 }
 
@@ -838,19 +839,55 @@ img {
 
 .filter-sorting .sorting-button {
   padding-left: 14px;
-  padding-right: 14px;
+  padding-right: 13px;
 }
 
 .sorting-button svg {
   margin-left: 24px;
 }
 
-.sorting-button:hover {
+.sorting-button:hover,
+.sorting-submenu:hover + .sorting-button {
   color: #323232;
+  background-color: #ffffff;
 }
 
-.sorting-button:hover svg path {
+.sorting-button:hover svg path,
+.sorting-submenu:hover + .sorting-button svg path {
   fill: #323232;
+}
+
+.sorting-submenu {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  color: #323232;
+  z-index: 1;
+  top: 36px;
+}
+
+.filter-sorting:hover .sorting-submenu{
+  display: block;
+}
+
+.sorting-submenu a {
+  display: block;
+  width: 152px;
+  color: #323232;
+  border-radius: 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: normal;
+  padding: 3px 20px;
+}
+
+.sorting-item:hover a{
+  color: #ffffff;
+  background-color: #1e90ff;
+}
+
+.sorting-submenu-current {
+  background-color: #d07058;
 }
 
 .fieldset-background {
@@ -1230,7 +1267,7 @@ img {
 }
 
 .modal {
-  position: fixed;
+  position: absolute;
   color: #323232;
   background-color: #f8f7f4;
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
@@ -1247,6 +1284,11 @@ img {
   padding-left: 19px;
   padding-right: 17px;
   padding-bottom: 22px;
+}
+
+.navigation-item-entrance:hover .modal-login {
+  display: block;
+  z-index: 1;
 }
 
 .login-form p {
@@ -1307,6 +1349,11 @@ img {
   margin-left: 18px;
 }
 
+.navigation-item-search:hover .modal-search {
+  display: block;
+  z-index: 1;
+}
+
 .search-form p {
   margin: 0;
 }
@@ -1325,14 +1372,17 @@ img {
 }
 
 .modal-feedback {
+  position: fixed;
   display: none;
   width: 429px;
   padding-left: 24px;
   padding-right: 25px;
   padding-top: 18px;
   padding-bottom: 22px;
-  top: 65px;
+  top: 50%;
   left: 50%;
+  margin-left: -239px;
+  margin-top: -150px;
 }
 
 .modal-feedback h2 {
