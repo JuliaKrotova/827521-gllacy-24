@@ -206,7 +206,8 @@ img {
 .catalog-submenu,
 .promo-list,
 .catalog-list,
-.features-list {
+.features-list,
+.basket-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -365,12 +366,107 @@ img {
   padding-bottom: 7px;
 }
 
+.navigation-item-basket{
+  position: relative;
+}
+
+.modal-basket {
+  display: none;
+  top: 36px;
+  left: -423px;
+  width: 510px;
+  padding: 20px 15px;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: normal;
+  z-index: 1;
+}
+
+.basket-red:hover .modal-basket{
+  display: block;
+}
+
+.modal-basket .basket-item{
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.modal-basket .basket-item:last-child{
+  border-bottom: 1px solid #cacac7;
+  margin-bottom: 15px;
+}
+
+.modal-basket img{
+  padding-left: 27px;
+  margin-right: 15px;
+  align-self: flex-start;
+}
+
+.modal-basket h3{
+  position: relative;
+  width: 220px;
+  margin-right: 26px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 10px;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: normal;
+}
+
+.modal-basket h3::before{
+  content: "";
+  position: absolute;
+  display: block;
+  background-image: url("../img/Х.png");
+  width: 11px;
+  height: 11px;
+  left: -73px;
+  top: 10px;
+}
+
+.modal-basket .price-kg{
+  width: 100px;
+  padding-top: 10px;
+  margin-right: 22px;
+}
+
+.modal-basket .price{
+  padding-top: 10px;
+}
+
+.modal-basket .total{
+  display: block;
+  text-align: right;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: bold;
+  margin-bottom: 13px;
+}
+
+.modal-basket .order-button{
+  display: block;
+  margin-left: auto;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  padding: 10px 15px;
+}
+
 .basket svg {
   padding-right: 8px;
 }
 
-.basket-red {
-  background-image: url("../img/basket-red.svg");
+.basket-red .basket-img{
+  display: none;
+}
+
+.basket-red .basket-img-red{
+  display: block;
+}
+
+.basket-empty .basket-img-red{
+  display: none;
 }
 
 .user-navigation .search {
@@ -700,6 +796,10 @@ img {
   border-radius: 5px;
 }
 
+.subscription input:hover {
+
+}
+
 .subscription .subscription-button {
   padding: 10px 18px;
   font-size: 18px;
@@ -827,7 +927,6 @@ img {
 
 .filter-button {
   background-color: #a9b9af;
-  padding: 9px 15px;
   border-radius: 50px;
   color: #ffffff;
   font-size: 16px;
@@ -837,57 +936,34 @@ img {
   border: none;
 }
 
-.filter-sorting .sorting-button {
-  padding-left: 14px;
-  padding-right: 13px;
+.sorting-select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 15px;
+  padding-right: 35px;
 }
 
-.sorting-button svg {
-  margin-left: 24px;
+.filter-sorting svg {
+  position: absolute;
+  right: 22px;
+  top: 16px;
 }
 
-.sorting-button:hover,
-.sorting-submenu:hover + .sorting-button {
-  color: #323232;
-  background-color: #ffffff;
-}
-
-.sorting-button:hover svg path,
-.sorting-submenu:hover + .sorting-button svg path {
+.filter-sorting:hover svg path {
   fill: #323232;
 }
 
-.sorting-submenu {
-  display: none;
-  position: absolute;
+.sorting-select:hover {
+  color: #323232;
+  background-color: #9db1a5;
+}
+
+.sorting-select:focus{
+  color: #323232;
   background-color: #ffffff;
-  color: #323232;
-  z-index: 1;
-  top: 36px;
-}
-
-.filter-sorting:hover .sorting-submenu{
-  display: block;
-}
-
-.sorting-submenu a {
-  display: block;
-  width: 152px;
-  color: #323232;
-  border-radius: 0;
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: normal;
-  padding: 3px 20px;
-}
-
-.sorting-item:hover a{
-  color: #ffffff;
-  background-color: #1e90ff;
-}
-
-.sorting-submenu-current {
-  background-color: #d07058;
 }
 
 .fieldset-background {
