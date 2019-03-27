@@ -1000,7 +1000,8 @@ img {
   appearance: none;
   padding-top: 9px;
   padding-bottom: 9px;
-  padding-right: 30px;
+  padding-right: 32px;
+  padding-left: 11px;
   outline: none;
 }
 
