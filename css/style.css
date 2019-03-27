@@ -9,15 +9,19 @@ body {
 }
 
 .site-wrapper {
+  min-width: 1200px;
   background-color: #849d8f;
   background-image: url("../img/ice-cream1.png"),
     url("../img/ice-cream2.png");
   background-repeat: no-repeat;
-  background-position: 277px 85px, 590px 124px, top center;
+  background-position: 435px 85px, 750px 124px, top center;
   transition: background-image 0.5s ease, background-color 0.5s ease;
+}
+
+.container {
   width: 1146px;
   margin: 0 auto;
-  padding: 0 27px;
+  //padding: 0 27px;
 }
 
 .site-wrapper-catalog {
@@ -31,14 +35,6 @@ body {
 .site-wrapper::after {
   content: "";
   visibility: hidden;
-}
-
-.site-wrapper::before {
-  background-image: url("img/slider-item2.png");
-}
-
-.site-wrapper::after {
-  background-image: url("img/slider-item3.png");
 }
 
 .visually-hidden,
