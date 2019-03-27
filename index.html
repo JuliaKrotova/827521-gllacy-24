@@ -3,9 +3,11 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no">
   <title>HTML Academy: Глейси</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:700,900,500&subset=latin,cyrillic" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -55,27 +57,27 @@
                     <path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z" />
                   </g>
                 </svg>Вход</a>
-                <section class="modal modal-login">
-                  <h2 class="visually-hidden">Личный кабинет</h2>
-                  <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-                    <p>
-                      <label class="visually-hidden" for="user-email">Электронная почта</label>
-                      <input class="user-email" id="user-email" type="email" name="email" placeholder="Электронная почта">
+              <section class="modal modal-login">
+                <h2 class="visually-hidden">Личный кабинет</h2>
+                <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                  <p>
+                    <label class="visually-hidden" for="user-email">Электронная почта</label>
+                    <input class="user-email" id="user-email" type="email" name="email" placeholder="Электронная почта">
+                  </p>
+                  <p>
+                    <label class="visually-hidden" for="user-password">Пароль</label>
+                    <input class="user-password" id="user-password" type="password" name="password" placeholder="Пароль">
+                  </p>
+                  <div class="login-entrance">
+                    <button class="button login-entrance-button" type="submit">Войти</button>
+                    <p class="login-help">
+                      <a class="restore" href="#">Забыли пароль?</a>
+                      <a class="login-new" href="#">Новая регистрация</a>
                     </p>
-                    <p>
-                      <label class="visually-hidden" for="user-password">Пароль</label>
-                      <input class="user-password" id="user-password" type="password" name="password" placeholder="Пароль">
-                    </p>
-                    <div class="login-entrance">
-                      <button class="button login-entrance-button" type="submit">Войти</button>
-                      <p class="login-help">
-                        <a class="restore" href="#">Забыли пароль?</a>
-                        <a class="login-new" href="#">Новая регистрация</a>
-                      </p>
-                    </div>
-                  </form>
-                </section>
-              </li>
+                  </div>
+                </form>
+              </section>
+            </li>
             <li><a href="#" class="button user-navigation-button basket">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
                   <g fill="#FFF">
@@ -138,7 +140,7 @@
           </ul>
           <ul class="catalog-list hit-list">
             <li class="catalog-item hit-item">
-              <img src="img/1.png" alt="апельсиновое мороженое">
+              <img src="img/1.png" alt="апельсиновое мороженое" width="267" height="267">
               <span class="price-kg">
                 <span class="price">310₽</span><b>/кг</b>
               </span>
@@ -150,7 +152,7 @@
               </div>
             </li>
             <li class="catalog-item hit-item">
-              <img src="img/2.png" alt="шоколадное мороженое">
+              <img src="img/2.png" alt="шоколадное мороженое" width="267" height="267">
               <span class="price-kg">
                 <span class="price">380₽</span><b>/кг</b>
               </span>
@@ -162,7 +164,7 @@
               </div>
             </li>
             <li class="catalog-item hit-item">
-              <img src="img/3.png" alt="клубничное мороженое">
+              <img src="img/3.png" alt="клубничное мороженое" width="267" height="267">
               <span class="price-kg">
                 <span class="price">355₽</span><b>/кг</b>
               </span>
@@ -174,7 +176,7 @@
               </div>
             </li>
             <li class="catalog-item hit-item">
-              <img src="img/4.png" alt="карамельное мороженое">
+              <img src="img/4.png" alt="карамельное мороженое" width="267" height="267">
               <span class="price-kg">
                 <span class="price">415₽</span><b>/кг</b>
               </span>
@@ -221,7 +223,9 @@
         </div>
         <section class="map">
           <h2 class="visually-hidden">Карта</h2>
-          <img src="img/map.jpg" alt="карта Глейси" width="" height="">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2376.715633476047!2d30.32717422821298!3d59.939249608393766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1553701881315"
+            width="1200" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <img src="img/map.jpg" alt="карта Глейси" width="1200" height="430">
           <div class="address">
             <p class="office-address">Адрес главного офиса <br>
               и офлайн-магазина:
@@ -309,7 +313,7 @@
     </form>
     <button class="modal-close" type="button">Закрыть</button>
   </section>
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>

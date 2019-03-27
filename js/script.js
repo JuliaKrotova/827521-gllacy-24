@@ -5,7 +5,6 @@ var modalFeedback = document.querySelector(".modal-feedback");
 feedbackButton.addEventListener("click", function(evt) {
   modalFeedback.classList.add("modal-open");
 });
-modalClose.addEventListener("click", function(evt){
-  modalFeedback.classList.remove
-  ("modal-open");
+modalClose.addEventListener("click", function(evt) {
+  modalFeedback.classList.remove("modal-open");
 });
